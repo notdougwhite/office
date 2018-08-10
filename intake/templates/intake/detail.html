@@ -1,0 +1,18 @@
+<h1>{{ case }}</h1>
+<p>clients</p>
+<ul>
+    {% for client in case.client_set.all %}
+    <li>{{ client.full_name }}</li>
+    {% endfor %}
+</ul>
+<p>Kids</p>
+<ol>
+    {% for kid in case.child_set.all %}
+    <li>{{ kid.current_name }}</li>
+    {% endfor %}
+</ol>
+<ul>
+    {% for docs in case.document_set.all %}
+    <li>{{ docs.Meta }}</li>
+    {% endfor %}
+</ul>
