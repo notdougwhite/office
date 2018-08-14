@@ -25,7 +25,7 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_entry_list'
 
     def get_queryset(self):
-        return Case.objects.order_by('-entry_date')[:5]
+        return Case.objects.order_by('-entry_date')
 
 
 # def detail(request, case_id):
